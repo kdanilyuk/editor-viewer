@@ -9,7 +9,7 @@ import { IDocument } from '../models/Document';
 @Injectable({
   providedIn: 'root'
 })
-export class BookService {
+export class DocumentService {
 
   private _bookUrl = "https://localhost:5001/api/documents/";
 

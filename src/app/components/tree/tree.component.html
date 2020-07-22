@@ -5,7 +5,7 @@
       <label (click)="onActivateTreeNodeEvent.emit(node)">{{node.name}}</label>
       <crud-document-menu
           [document]="node"
-          (onAddEvent)="onAddEvent.emit(node.id)"
+          (onAddEvent)="onAddEvent.emit()"
           (onRemoveEvent)="onRemoveEvent.emit(node)"
           (onEditContentEvent)="onEditContentEvent.emit(node)"
           (onEditStructureEvent)="onEditStructureEvent.emit(node)"

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { BookService } from 'src/app/services/book.service';
+import { DocumentService } from 'src/app/services/document.service';
 import { DocumentPreview } from 'src/app/models/DocumentPreview';
 import { ModalService } from 'src/app/services/modal.service';
 import { NestedTreeControl } from '@angular/cdk/tree';
@@ -49,7 +49,7 @@ export class EditorComponent implements OnInit {
   //Search
   public searchField = "";
 
-  constructor(private _bookService: BookService, private _modalService: ModalService, public dialog: MatDialog) {}
+  constructor(private _bookService: DocumentService, private _modalService: ModalService, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.subjectId = 1;
@@ -122,7 +122,7 @@ export class EditorComponent implements OnInit {
       };
     }
     const dialogRef = this.dialog.open(AddDocumentDialogComponent, {
-      data: document
+      data: data
     });
 
     dialogRef.afterClosed().subscribe(newDocument => {
