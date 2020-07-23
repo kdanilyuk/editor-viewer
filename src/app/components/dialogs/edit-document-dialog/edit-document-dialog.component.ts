@@ -12,12 +12,11 @@ export class DocumentErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'add-document-dialog',
-  templateUrl: './add-document-dialog.component.html',
-  styleUrls: ['./add-document-dialog.component.scss']
+  selector: 'app-edit-document-dialog',
+  templateUrl: './edit-document-dialog.component.html',
+  styleUrls: ['./edit-document-dialog.component.scss']
 })
-
-export class AddDocumentDialogComponent implements OnInit {
+export class EditDocumentDialogComponent implements OnInit {
 
   nameFormControl = new FormControl('', [
     Validators.required
@@ -29,7 +28,7 @@ export class AddDocumentDialogComponent implements OnInit {
 
   matcher = new DocumentErrorStateMatcher();
 
-  constructor(public dialogRef: MatDialogRef<AddDocumentDialogComponent>,
+  constructor(public dialogRef: MatDialogRef<EditDocumentDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DocumentPreview) { }
 
   ngOnInit() {}
@@ -57,4 +56,5 @@ export class AddDocumentDialogComponent implements OnInit {
       this.descriptionFormControl.markAsTouched();
     }
   }
+
 }

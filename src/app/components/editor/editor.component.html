@@ -2,7 +2,7 @@
       <div class="flex-tree-container">
           <div class="flex-search-region">
               <mat-form-field class="flex-search-input">
-                <mat-label>Search</mat-label>
+                <mat-label>Поиск</mat-label>
                 <input matInput [(ngModel)]="searchField">
               </mat-form-field>
               <button mat-icon-button color="primary" aria-label="Search icon">
@@ -29,6 +29,8 @@
                   [disabled]="model.isReadOnly"
               ></ckeditor>
           </div>
-          <button *ngIf="!model.isReadOnly" (click)="saveDocument($event)" type="button" mat-raised-button>Save</button>
+          <div class="btn-holder" align="right">
+            <button *ngIf="!model.isReadOnly" (click)="saveDocument($event)" mat-raised-button color="primary">Сохранить</button>
+          </div>
       </div>
 </div>

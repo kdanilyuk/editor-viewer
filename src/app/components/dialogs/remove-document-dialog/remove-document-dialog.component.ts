@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { IDocument } from 'src/app/models/Document';
+import { IDocumentTree } from 'src/app/models/DocumentTree';
 
 @Component({
   selector: 'remove-document-dialog',
@@ -10,7 +10,7 @@ import { IDocument } from 'src/app/models/Document';
 export class RemoveDocumentDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<RemoveDocumentDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: IDocument) { }
+    @Inject(MAT_DIALOG_DATA) public data: IDocumentTree) { }
 
   onNoClick(): void {
     this.dialogRef.close();

@@ -24,6 +24,12 @@
   .flex-editor-container {
     flex-shrink: 3;
     flex-basis: 75%;
+
+    .btn-holder {
+      &[align='right'] {
+        justify-content: flex-end;
+      }
+    }
   }
 }
 

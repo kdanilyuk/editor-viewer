@@ -15,6 +15,7 @@ import { TreeComponent } from './components/tree/tree.component';
 import { RemoveDocumentDialogComponent } from './components/dialogs/remove-document-dialog/remove-document-dialog.component';
 import { AddDocumentDialogComponent } from './components/dialogs/add-document-dialog/add-document-dialog.component';
 import { CrudDocumentMenuComponent } from './components/dialogs/crud-document-menu/crud-document-menu.component';
+import { EditDocumentDialogComponent } from './components/dialogs/edit-document-dialog/edit-document-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CrudDocumentMenuComponent } from './components/dialogs/crud-document-me
     TreeComponent,
     RemoveDocumentDialogComponent,
     AddDocumentDialogComponent,
-    CrudDocumentMenuComponent
+    CrudDocumentMenuComponent,
+    EditDocumentDialogComponent
   ],
   imports: [
     BrowserModule,
