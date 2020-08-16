@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import * as Editor from 'ckeditor5-custom-build/build/ckeditor';
 import { DocumentService } from 'src/app/services/document.service';
 import { DocumentPreview } from 'src/app/models/DocumentPreview';
 import { ModalService } from 'src/app/services/modal.service';
@@ -20,12 +20,19 @@ import { EditDocumentDialogComponent } from '../dialogs/edit-document-dialog/edi
 export class EditorComponent implements OnInit {
 
   //Text editor
-  public editor = ClassicEditor;
+  public editor = Editor;
   public model = {
     editorData: '',
     isReadOnly: true,
     config: {
       placeholder: 'Type the content here!',
+      toolbar: [ 'heading',
+        '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'alignment', 'horizontalLine',
+        '|', 'fontBackgroundColor', 'fontColor', 'fontSize', 'fontFamily',
+        '|', 'indent', 'outdent',
+        '|', 'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed',
+        '|', 'MathType',
+        '|', 'undo', 'redo' ],
     }
   }
 
