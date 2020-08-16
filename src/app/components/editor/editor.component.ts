@@ -70,10 +70,12 @@ export class EditorComponent implements OnInit {
     });
   }
 
-  onActivateTreeNodeEvent(node) {
+  onActivateTreeNodeEvent(doc) {
+    var node = doc.node;
     this._bookService.getContent(node.id).subscribe(doc => {
       this.model.editorData = doc.text;
       this.currentDocument = doc;
+      doc.event.target.addClass("highlight");
     })
     this.currentNodeHasChild = node.children.length > 0;
     this.currentNodeId = node.id;
