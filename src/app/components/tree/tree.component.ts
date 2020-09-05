@@ -17,9 +17,19 @@ export class TreeComponent implements OnInit {
   @Output() onEditContentEvent = new EventEmitter();
   @Output() onEditStructureEvent = new EventEmitter();
 
-  constructor() { }
+  currentNodeId: Number;
+
+  constructor() { this.currentNodeId = 0; }
 
   ngOnInit(): void {
+  }
+
+  nodeSelected(nodeId) {
+    this.currentNodeId = nodeId;
+  }
+
+  isActive(nodeId) {
+    return this.currentNodeId == nodeId;
   }
 
   drop($event) {

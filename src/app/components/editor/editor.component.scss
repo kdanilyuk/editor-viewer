@@ -14,7 +14,7 @@
     .flex-search-region {
       display: flex;
       flex-basis: 100%;
-
+      align-items: center;
       .flex-search-input {
         flex-basis: 85%;
       }
@@ -29,6 +29,7 @@
       &[align='right'] {
         justify-content: flex-end;
       }
+      padding-top: 5px;
     }
   }
 }

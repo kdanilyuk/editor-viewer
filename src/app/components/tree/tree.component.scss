@@ -23,12 +23,17 @@
     opacity: 0;
   }
 
-  .highlight, label:hover {
-    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5) );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
+  label {
+    padding: 11px;
+    border-radius: 20px;
+  }
+
+  label:hover {
+    background: rgba(0,0,0,.04);
+  }
+
+  .highlight {
+    background: rgba(0,0,0,.2);
   }
 }
 
